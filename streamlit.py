@@ -10,9 +10,6 @@ st.title("RAG Application - Document Q&A")
 st.header("Upload a Document")
 uploaded_file = st.file_uploader("Upload a PDF or Text file", type=["pdf", "txt"])
 
-# Increase max file upload size
-st.set_option("server.maxUploadSize", 500)
-
 if uploaded_file:
     files = {"file": (uploaded_file.name, uploaded_file, uploaded_file.type)}
 
